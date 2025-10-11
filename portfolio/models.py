@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     name = models.CharField(max_length=50)
@@ -7,7 +8,7 @@ class Project(models.Model):
     live_link = models.URLField(blank=True, null=True)
     github_frontend_link = models.URLField(blank=True, null=True)
     github_backend_link = models.URLField(blank=True, null=True)
-    image = models.ImageField(upload_to='image', blank=True, null=True)
+    image = CloudinaryField('image')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
