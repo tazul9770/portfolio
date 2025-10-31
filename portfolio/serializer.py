@@ -16,4 +16,4 @@ class SkillSerializer(serializers.ModelSerializer):
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
-        fields = ['id', 'name', 'email', 'phone_number']
+        fields = ['id', 'email', 'phone_number', 'comment']
