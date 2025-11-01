@@ -17,3 +17,10 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = ['id', 'email', 'phone_number', 'comment']
+
+    def validate_phone_number(self, number):
+        if not number.isdigit():
+            raise serializers.ValidationError("Phone number must contain only digits")
+        if len(number) != 11:
+            raise serializers.ValidationError("Phone number must be exactly 11 digits.")
+        return number
