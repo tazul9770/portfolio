@@ -1,7 +1,7 @@
 from rest_framework.response import Response
-from portfolio.models import Project, Skill, Contact
+from portfolio.models import Project, Contact
 from rest_framework.viewsets import ModelViewSet
-from portfolio.serializer import ProjectSerializer, SkillSerializer, ContactSerializer
+from portfolio.serializer import ProjectSerializer,ContactSerializer
 from rest_framework import status
 from django.core.mail import send_mail
 from django.conf import settings
@@ -9,11 +9,6 @@ from django.conf import settings
 class ProjectViewSet(ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-
-class SkillViewSet(ModelViewSet):
-    queryset = Skill.objects.all()
-    serializer_class = SkillSerializer
-
 
 class ContactViewSet(ModelViewSet):
     queryset = Contact.objects.all()

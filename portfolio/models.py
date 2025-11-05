@@ -13,10 +13,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
-    
-class Skill(models.Model):
-    name = models.CharField(max_length=50)
-    description = models.TextField()
 
 class Contact(models.Model):
     email = models.EmailField()
