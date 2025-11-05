@@ -4,6 +4,7 @@ charset-normalizer==3.4.3
 cloudinary==1.44.1
 Django==5.2.7
 django-cloudinary-storage==0.3.0
+django-cors-headers==4.9.0
 djangorestframework==3.16.1
 drf-nested-routers==0.95.0
 drf-yasg==1.21.11

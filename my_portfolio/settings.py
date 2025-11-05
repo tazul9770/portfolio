@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
+    'corsheaders',
     'drf_yasg',
     'rest_framework', 
     'portfolio',
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,6 +80,10 @@ DATABASES = {
         'PORT': config('port')
     }
 }
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+]
 
 # Cloudinary Configuration       
 cloudinary.config( 
