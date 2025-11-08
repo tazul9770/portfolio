@@ -2,6 +2,7 @@ from rest_framework import serializers
 from portfolio.models import Project, Contact
 
 class ProjectSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField() 
     class Meta:
         model = Project
         fields = ['id', 'name', 'description',
