@@ -5,6 +5,7 @@ from portfolio.serializer import ProjectSerializer,ContactSerializer
 from rest_framework import status
 from django.core.mail import send_mail
 from django.conf import settings
+from portfolio.paginations import DefaultPagination
 
 class ProjectViewSet(ModelViewSet):
     queryset = Project.objects.all()
@@ -13,6 +14,7 @@ class ProjectViewSet(ModelViewSet):
 class ContactViewSet(ModelViewSet):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+    pagination_class = DefaultPagination
 
     def create(self, request, *args, **kwargs):
         serializer = ContactSerializer(data=request.data)
