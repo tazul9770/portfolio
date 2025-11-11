@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from portfolio.models import Project, Contact
 from rest_framework.viewsets import ModelViewSet
-from portfolio.serializer import ProjectSerializer,ContactSerializer
+from portfolio.serializer import ContactSerializer, ProjectSerializer
 from rest_framework import status
 from django.core.mail import send_mail
 from django.conf import settings

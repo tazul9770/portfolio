@@ -6,6 +6,7 @@ class Project(models.Model):
     description = models.TextField()
     tech_stack = models.CharField(max_length=200)
     live_link = models.URLField(blank=True, null=True)
+    backend_deploy_link = models.URLField(blank=True, null=True)
     github_frontend_link = models.URLField(blank=True, null=True)
     github_backend_link = models.URLField(blank=True, null=True)
     image = CloudinaryField('image')
