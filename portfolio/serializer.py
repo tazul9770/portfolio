@@ -6,7 +6,7 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ['id', 'name', 'description',
-                 'image', 'tech_stack', 'live_link',
+                 'image', 'tech_stack', 'live_link', 'backend_deploy_link',
                  'github_frontend_link', 'github_backend_link', 'created_at']
 
 class ContactSerializer(serializers.ModelSerializer):
