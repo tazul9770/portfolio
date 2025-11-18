@@ -83,6 +83,7 @@ DATABASES = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+    'https://portfolio-frontend-one-beige.vercel.app'
 ]
 
 # Cloudinary Configuration       
